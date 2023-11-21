@@ -1,0 +1,99 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2017/neos-933638.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__3__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   neos-933638.mps.gz
+SEED:       3
+@01 /home/mcs001/s132664/testsets/IP/miplib2017/neos-933638.mps.gz ===========
+@02 neos-933638.mps.gz
+@03 1686567009
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 3
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+Warning line 13662: row "R13660" for objective function "N" ignored
+original problem has 32417 variables (28637 bin, 0 int, 0 impl, 3780 cont) and 13658 constraints
+feasible solution found by trivial heuristic after 0.5 seconds, objective value 3.856290e+10
+presolving:
+(round 1, fast)       21087 del vars, 3367 del conss, 0 add conss, 3243 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 8787 clqs
+(round 2, fast)       23530 del vars, 3367 del conss, 0 add conss, 4043 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 8787 clqs
+(round 3, exhaustive) 23530 del vars, 4016 del conss, 0 add conss, 4043 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 8787 clqs
+(round 4, exhaustive) 23530 del vars, 4247 del conss, 0 add conss, 4043 chg bounds, 231 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 8787 clqs
+(round 5, exhaustive) 23530 del vars, 4247 del conss, 0 add conss, 4043 chg bounds, 231 chg sides, 0 chg coeffs, 8613 upgd conss, 0 impls, 8787 clqs
+(round 6, medium)     23530 del vars, 4267 del conss, 16 add conss, 4043 chg bounds, 247 chg sides, 62 chg coeffs, 8613 upgd conss, 0 impls, 8787 clqs
+   (6.3s) probing: 1000/8089 (12.4%) - 0 fixings, 0 aggregations, 17424 implications, 0 bound changes
+   (6.3s) probing: 1001/8089 (12.4%) - 0 fixings, 0 aggregations, 17443 implications, 0 bound changes
+   (6.3s) probing aborted: 1000/1000 successive useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.59 	(matrix graph, 32776 nodes, 103864 edges)
+Number of generators:			31 	(max: 1500)
+Log10 of symmetry group order:		10.9
+Number of vars moved by some symmetry:	7556
+Total time for symmetry detection:	0.60
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (7 rounds: 7 fast, 5 medium, 4 exhaustive):
+ 23530 deleted vars, 4267 deleted constraints, 16 added constraints, 4043 tightened bounds, 0 added holes, 247 changed sides, 62 changed coefficients
+ 0 implications, 26230 cliques
+presolved problem has 8887 variables (8087 bin, 0 int, 800 impl, 0 cont) and 9408 constraints
+     51 constraints of type <knapsack>
+   8556 constraints of type <setppc>
+    798 constraints of type <linear>
+      2 constraints of type <logicor>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 6.59
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+t 7.0s|     1 |     0 |     0 |     - | trivial|   0 |   - |8887 |9408 |   0 |   0 |   0 |   0 |   0 |-2.492000e+03 | 4.876000e+05 |    Inf 
+p 7.2s|     1 |     0 |     0 |     - |  clique|   0 |   - |8887 |9408 |8887 |9407 |   0 |   0 |   0 |-2.492000e+03 | 2.525520e+05 |    Inf 
+p 9.1s|     1 |     0 |   267 |     - | vbounds|   0 |  57 |8887 |9408 |8887 |9407 |   0 |  20 |   0 |-2.492000e+03 | 4.924000e+04 |    Inf 
+  9.9s|     1 |     0 |  2977 |     - |   235M |   0 |1552 |8887 |9418 |8887 |9407 |   0 |  30 |   0 | 2.760000e+02 | 4.924000e+04 |  Large 
+L48.5s|     1 |     0 |  5865 |     - |    rens|   0 |1552 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 4.325000e+03 |1467.03%
+ 48.8s|     1 |     0 |  5865 |     - |   243M |   0 |1552 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 4.325000e+03 |1467.03%
+i49.2s|     1 |     0 |  6930 |     - |  oneopt|   0 |   - |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 4.321000e+03 |1465.58%
+ 49.5s|     1 |     0 |  6930 |     - |   243M |   0 |1552 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 4.321000e+03 |1465.58%
+ 50.5s|     1 |     2 |  6930 |     - |   243M |   0 |1552 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 4.321000e+03 |1465.58%
+r87.9s|    31 |    30 | 44866 |1369.7 |shifting|  30 | 192 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 4.303000e+03 |1459.06%
+i88.3s|    32 |    31 | 44866 |1325.5 |  oneopt|  31 |   - |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 4.293000e+03 |1455.43%
+r 129s|    81 |    80 | 68613 | 810.5 |shifting|  80 | 153 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 3.293000e+03 |1093.12%
+i 129s|    81 |    82 | 68794 | 812.7 |  oneopt|  80 |   - |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 3.288000e+03 |1091.30%
+  145s|   100 |   101 | 72702 | 696.2 |   247M |  99 | 169 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 3.288000e+03 |1091.30%
+r 155s|   111 |   110 | 75287 | 650.1 |shifting| 110 |  67 |8887 |9409 |8887 |9407 |   0 |  31 |   0 | 2.760000e+02 | 2.850000e+02 |   3.26%
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  240s|   200 |   201 | 92167 | 444.2 |   251M | 148 | 219 |8887 |9457 |8887 |9407 |   0 |  79 |   0 | 2.760000e+02 | 2.850000e+02 |   3.26%
+o 252s|   214 |   215 |102836 | 465.1 |objpscos| 148 |   0 |8887 |9457 |8887 |9407 |   0 |  79 |   0 | 2.760000e+02 | 2.760000e+02 |   0.00%
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 252.17
+Solving Nodes      : 214
+Primal Bound       : +2.76000000000000e+02 (13 solutions)
+Dual Bound         : +2.76000000000000e+02
+Gap                : 0.00 %
+
+Number of variables fixed to 0 by isomorphism pruning:	     2
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686567262

@@ -1,0 +1,69 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2017/pigeon-16.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__4__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   pigeon-16.mps.gz
+SEED:       4
+@01 /home/mcs001/s132664/testsets/IP/miplib2017/pigeon-16.mps.gz ===========
+@02 pigeon-16.mps.gz
+@03 1686573967
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 4
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 1072 variables (928 bin, 0 int, 0 impl, 144 cont) and 2353 constraints
+feasible solution found by trivial heuristic after 0.0 seconds, objective value 0.000000e+00
+presolving:
+(round 1, fast)       144 del vars, 1 del conss, 0 add conss, 48 chg bounds, 1 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 16 clqs
+(round 2, exhaustive) 144 del vars, 1081 del conss, 0 add conss, 48 chg bounds, 1 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 16 clqs
+(round 3, exhaustive) 144 del vars, 1081 del conss, 0 add conss, 48 chg bounds, 1 chg sides, 0 chg coeffs, 376 upgd conss, 0 impls, 16 clqs
+(round 4, medium)     160 del vars, 1081 del conss, 0 add conss, 48 chg bounds, 17 chg sides, 16 chg coeffs, 376 upgd conss, 0 impls, 136 clqs
+   (0.0s) probing: 51/864 (5.9%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.0s) probing aborted: 50/50 successive totally useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.02 	(matrix graph, 5074 nodes, 21984 edges)
+Number of generators:			13 	(max: 1500)
+Log10 of symmetry group order:		10.9
+Number of vars moved by some symmetry:	882
+Total time for symmetry detection:	0.02
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (5 rounds: 5 fast, 4 medium, 3 exhaustive):
+ 160 deleted vars, 1081 deleted constraints, 0 added constraints, 48 tightened bounds, 0 added holes, 17 changed sides, 16 changed coefficients
+ 0 implications, 136 cliques
+presolved problem has 912 variables (864 bin, 0 int, 0 impl, 48 cont) and 1273 constraints
+    360 constraints of type <knapsack>
+     16 constraints of type <setppc>
+    896 constraints of type <linear>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1000)
+Presolving Time: 0.06
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  0.1s|     1 |     0 |   160 |     - |    19M |   0 | 210 | 912 |1289 | 912 |1272 |   0 |  15 |   0 |-1.600000e+04 | 0.000000e+00 |    Inf 
+  0.3s|     1 |     2 |   670 |     - |    20M |   0 | 210 | 912 |1289 | 912 |1272 |   0 |  15 |   0 |-1.600000e+04 | 0.000000e+00 |    Inf 
+@04 1686580414

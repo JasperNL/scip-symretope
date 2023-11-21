@@ -1,0 +1,77 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2017/neos-4382714-ruvuma.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__1__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   neos-4382714-ruvuma.mps.gz
+SEED:       1
+@01 /home/mcs001/s132664/testsets/IP/miplib2017/neos-4382714-ruvuma.mps.gz ===========
+@02 neos-4382714-ruvuma.mps.gz
+@03 1686566709
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 1
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 6562 variables (6561 bin, 0 int, 0 impl, 1 cont) and 3645 constraints
+presolving:
+(round 1, exhaustive) 1 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 3645 upgd conss, 0 impls, 3645 clqs
+   (0.1s) probing: 51/6561 (0.8%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.1s) probing aborted: 50/50 successive totally useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.14 	(matrix graph, 10206 nodes, 32805 edges)
+Number of generators:			19 	(max: 1500)
+Log10 of symmetry group order:		17.9
+Number of vars moved by some symmetry:	6561
+Total time for symmetry detection:	0.15
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 1 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 3645 cliques
+presolved problem has 6561 variables (6561 bin, 0 int, 0 impl, 0 cont) and 3646 constraints
+   3645 constraints of type <setppc>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.27
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  1.7s|     1 |     0 |     0 |     - |    66M |   0 |2705 |6561 |3725 |6561 |3645 |   0 |  78 |   0 | 0.000000e+00 |      --      |    Inf 
+ 22.9s|     1 |     2 | 20211 |     - |    79M |   0 |2705 |6561 |3927 |6561 |3645 |   0 |  80 |   0 | 0.000000e+00 |      --      |    Inf 
+ 1556s|   100 |    43 |  1728k|17258.1 |   104M |  17 |2624 |6561 |4303 |6561 |3645 |   0 | 467 |   0 | 0.000000e+00 |      --      |    Inf 
+ 2506s|   200 |    65 |  2996k|14955.4 |   107M |  19 |2616 |6561 |4447 |6561 |3645 |   0 | 611 |   0 | 0.000000e+00 |      --      |    Inf 
+ 3502s|   300 |   101 |  4239k|14111.6 |   107M |  22 |2605 |6561 |4481 |6561 |3645 |   0 | 645 |   0 | 0.000000e+00 |      --      |    Inf 
+ 4585s|   400 |   133 |  5625k|14049.1 |   111M |  22 |   - |6561 |4760 |   0 |   0 |   0 | 925 |   0 | 0.000000e+00 |      --      |    Inf 
+ 5860s|   500 |   179 |  6977k|13941.7 |   111M |  26 |2576 |6561 |4810 |6561 |3645 |   0 | 978 |   0 | 0.000000e+00 |      --      |    Inf 
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 7200.01
+Solving Nodes      : 597
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : +0.00000000000000e+00
+Gap                : infinite
+
+Number of variables fixed to 0 by isomorphism pruning:	  8071
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686573927

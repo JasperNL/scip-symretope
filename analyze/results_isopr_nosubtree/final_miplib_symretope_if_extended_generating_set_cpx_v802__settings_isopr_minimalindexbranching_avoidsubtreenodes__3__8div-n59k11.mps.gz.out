@@ -1,0 +1,79 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2017/8div-n59k11.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__3__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   8div-n59k11.mps.gz
+SEED:       3
+@01 /home/mcs001/s132664/testsets/IP/miplib2017/8div-n59k11.mps.gz ===========
+@02 8div-n59k11.mps.gz
+@03 1686566827
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 3
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 12287 variables (12282 bin, 5 int, 0 impl, 0 cont) and 4114 constraints
+presolving:
+(round 1, fast)       11 del vars, 11 del conss, 1 add conss, 22 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 2047 clqs
+(round 2, exhaustive) 11 del vars, 12 del conss, 1 add conss, 22 chg bounds, 4 chg sides, 3 chg coeffs, 0 upgd conss, 0 impls, 2047 clqs
+(round 3, exhaustive) 11 del vars, 12 del conss, 1 add conss, 22 chg bounds, 4 chg sides, 3 chg coeffs, 2047 upgd conss, 0 impls, 2047 clqs
+   (2.5s) probing: 1000/12271 (8.1%) - 0 fixings, 0 aggregations, 999 implications, 0 bound changes
+   (2.5s) probing: 1001/12271 (8.2%) - 0 fixings, 0 aggregations, 1000 implications, 0 bound changes
+   (2.5s) probing aborted: 1000/1000 successive useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		4.49 	(matrix graph, 30730 nodes, 4231178 edges)
+Number of generators:			10 	(max: 1500)
+Log10 of symmetry group order:		7.6
+Number of vars moved by some symmetry:	12265
+Total time for symmetry detection:	4.50
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 11 deleted vars, 12 deleted constraints, 1 added constraints, 22 tightened bounds, 0 added holes, 4 changed sides, 3 changed coefficients
+ 1000 implications, 2047 cliques
+presolved problem has 12276 variables (12271 bin, 5 int, 0 impl, 0 cont) and 4104 constraints
+   2047 constraints of type <setppc>
+   2056 constraints of type <linear>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 6.72
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+ 19.6s|     1 |     0 |   902 |     - |   920M |   0 |3639 |  12k|4104 |  12k|4103 |   0 |   0 |   0 |-1.421000e+03 |      --      |    Inf 
+  266s|     1 |     0 | 15750 |     - |   922M |   0 |3639 |  12k|4110 |  12k|4103 |   0 |   6 |   0 |-1.421000e+03 |      --      |    Inf 
+  268s|     1 |     0 | 15750 |     - |   922M |   0 |3639 |  12k|4110 |  12k|4103 |   0 |   6 |   0 |-1.421000e+03 |      --      |    Inf 
+  270s|     1 |     0 | 15750 |     - |   924M |   0 |3639 |  12k|4112 |  12k|4105 |   0 |   6 |   0 |-1.421000e+03 |      --      |    Inf 
+  279s|     1 |     2 | 15750 |     - |   925M |   0 |3639 |  12k|4112 |  12k|4105 |   0 |   6 |   0 |-1.421000e+03 |      --      |    Inf 
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 7200.32
+Solving Nodes      : 29
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : -1.42100000000000e+03
+Gap                : infinite
+
+Number of variables fixed to 0 by isomorphism pruning:	   331
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686574031

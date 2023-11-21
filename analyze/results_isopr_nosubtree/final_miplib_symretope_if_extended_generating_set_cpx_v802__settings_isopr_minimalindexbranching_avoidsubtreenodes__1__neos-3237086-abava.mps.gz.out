@@ -1,0 +1,78 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2017/neos-3237086-abava.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__1__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   neos-3237086-abava.mps.gz
+SEED:       1
+@01 /home/mcs001/s132664/testsets/IP/miplib2017/neos-3237086-abava.mps.gz ===========
+@02 neos-3237086-abava.mps.gz
+@03 1686566707
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 1
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 50192 variables (50192 bin, 0 int, 0 impl, 0 cont) and 69472 constraints
+presolving:
+(round 1, fast)       992 del vars, 976 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 26896 clqs
+(round 2, exhaustive) 992 del vars, 976 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 64832 upgd conss, 0 impls, 26896 clqs
+(round 3, medium)     992 del vars, 31696 del conss, 61440 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 64832 upgd conss, 0 impls, 88336 clqs
+   (38.5s) probing: 1000/49200 (2.0%) - 0 fixings, 0 aggregations, 1129056 implications, 0 bound changes
+   (38.6s) probing: 1001/49200 (2.0%) - 0 fixings, 0 aggregations, 1129112 implications, 0 bound changes
+   (38.6s) probing aborted: 1000/1000 successive useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		3.96 	(matrix graph, 243216 nodes, 516480 edges)
+Number of generators:			16 	(max: 1300)
+Log10 of symmetry group order:		9.8
+Number of vars moved by some symmetry:	49200
+Total time for symmetry detection:	4.04
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (4 rounds: 4 fast, 3 medium, 2 exhaustive):
+ 992 deleted vars, 31696 deleted constraints, 61440 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 231528 cliques
+presolved problem has 49200 variables (49200 bin, 0 int, 0 impl, 0 cont) and 99217 constraints
+     16 constraints of type <knapsack>
+  88336 constraints of type <setppc>
+   3600 constraints of type <linear>
+   7264 constraints of type <logicor>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 42.51
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+ 44.7s|     1 |     0 |    65 |     - |   586M |   0 | 224 |  49k|  99k|  49k|  99k|   0 |  73 |   0 | 0.000000e+00 |      --      |    Inf 
+ 49.4s|     1 |     2 |  6032 |     - |   610M |   0 | 224 |  49k|  99k|  49k|  99k|   0 |  73 |   0 | 0.000000e+00 |      --      |    Inf 
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 7200.06
+Solving Nodes      : 25
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : +0.00000000000000e+00
+Gap                : infinite
+
+Number of variables fixed to 0 by isomorphism pruning:	   279
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686574049

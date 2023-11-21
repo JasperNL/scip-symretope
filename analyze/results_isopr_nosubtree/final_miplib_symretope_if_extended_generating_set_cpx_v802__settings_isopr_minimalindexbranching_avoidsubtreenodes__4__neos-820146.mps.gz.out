@@ -1,0 +1,80 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2010/neos-820146.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__4__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   neos-820146.mps.gz
+SEED:       4
+@01 /home/mcs001/s132664/testsets/IP/miplib2010/neos-820146.mps.gz ===========
+@02 neos-820146.mps.gz
+@03 1686567555
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 4
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 600 variables (600 bin, 0 int, 0 impl, 0 cont) and 830 constraints
+presolving:
+(round 1, fast)       225 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 95 clqs
+(round 2, exhaustive) 225 del vars, 45 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 95 clqs
+(round 3, exhaustive) 225 del vars, 45 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 770 upgd conss, 0 impls, 95 clqs
+   (0.0s) probing: 51/375 (13.6%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.0s) probing aborted: 50/50 successive totally useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.01 	(matrix graph, 1760 nodes, 5100 edges)
+Number of generators:			23 	(max: 1500)
+Log10 of symmetry group order:		12.5
+Number of vars moved by some symmetry:	375
+Total time for symmetry detection:	0.01
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 225 deleted vars, 45 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 95 cliques
+presolved problem has 375 variables (375 bin, 0 int, 0 impl, 0 cont) and 786 constraints
+     95 constraints of type <setppc>
+     15 constraints of type <linear>
+    675 constraints of type <logicor>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.02
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  0.0s|     1 |     0 |     0 |     - |  7841k |   0 | 100 | 375 | 809 | 375 | 785 |   0 |  23 |   0 | 0.000000e+00 |      --      |    Inf 
+  0.1s|     1 |     2 |   199 |     - |  8195k |   0 | 100 | 375 | 810 | 375 | 785 |   0 |  24 |   0 | 0.000000e+00 |      --      |    Inf 
+  0.7s|   100 |     7 |  4934 |  47.8 |  9581k |  14 | 129 | 375 | 892 | 375 | 785 |   0 | 107 |   0 | 0.000000e+00 |      --      |    Inf 
+  1.5s|   200 |    13 |  9371 |  46.1 |  9662k |  26 |   - | 375 |1009 |   0 |   0 |   0 | 224 |   0 | 0.000000e+00 |      --      |    Inf 
+  2.4s|   300 |    27 | 13548 |  44.6 |  9762k |  29 | 138 | 375 |1130 | 375 | 785 |   0 | 345 |   0 | 0.000000e+00 |      --      |    Inf 
+  3.2s|   400 |    15 | 17071 |  42.3 |  9805k |  31 |   - | 375 |1260 |   0 |   0 |   0 | 475 |   0 | 0.000000e+00 |      --      |    Inf 
+
+SCIP Status        : problem is solved [infeasible]
+Solving Time (sec) : 3.66
+Solving Nodes      : 450
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : +1.00000000000000e+20
+Gap                : 0.00 %
+
+Number of variables fixed to 0 by isomorphism pruning:	   878
+Number of variables fixed to 1 by isomorphism pruning:	     3
+@04 1686567558

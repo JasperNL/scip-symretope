@@ -1,0 +1,91 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2010/sts729.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__2__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   sts729.mps.gz
+SEED:       2
+@01 /home/mcs001/s132664/testsets/IP/miplib2010/sts729.mps.gz ===========
+@02 sts729.mps.gz
+@03 1686566770
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 2
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 729 variables (729 bin, 0 int, 0 impl, 0 cont) and 88452 constraints
+feasible solution found by trivial heuristic after 0.1 seconds, objective value 7.290000e+02
+presolving:
+(round 1, exhaustive) 0 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 88452 upgd conss, 0 impls, 0 clqs
+   (0.6s) probing: 51/729 (7.0%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.6s) probing aborted: 50/50 successive totally useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		1.51 	(matrix graph, 89181 nodes, 265356 edges)
+Number of generators:			22 	(max: 1500)
+Log10 of symmetry group order:		19.8
+Number of vars moved by some symmetry:	729
+Total time for symmetry detection:	1.51
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 729 variables (729 bin, 0 int, 0 impl, 0 cont) and 88453 constraints
+  88452 constraints of type <logicor>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 2.04
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+i 2.3s|     1 |     0 |     0 |     - |  oneopt|   0 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 0.000000e+00 | 6.560000e+02 |    Inf 
+ 23.3s|     1 |     0 |     1 |     - |   247M |   0 | 729 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.430000e+02 | 6.560000e+02 | 169.96%
+  126s|     1 |     2 |  5349 |     - |   329M |   0 | 729 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.430000e+02 | 6.560000e+02 | 169.96%
+ 2525s|   100 |    61 | 97927 | 989.2 |   345M |  41 | 619 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.483333e+02 | 6.560000e+02 | 164.16%
+d4761s|   170 |   127 |110266 | 652.5 |pscostdi|  74 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.483333e+02 | 6.550000e+02 | 163.76%
+*5109s|   197 |   132 |145938 | 744.6 |    LP  |  76 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.510000e+02 | 6.540000e+02 | 160.56%
+ 5109s|   200 |   131 |145945 | 733.4 |   352M |  76 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.510000e+02 | 6.540000e+02 | 160.56%
+ 5270s|   300 |   137 |163121 | 545.6 |   352M |  81 |  26 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.523333e+02 | 6.540000e+02 | 159.18%
+ 5277s|   400 |   137 |163594 | 410.0 |   352M |  86 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.523333e+02 | 6.540000e+02 | 159.18%
+ 5468s|   500 |   145 |183514 | 367.8 |   352M |  89 |  24 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.530000e+02 | 6.540000e+02 | 158.50%
+ 5628s|   600 |   151 |200860 | 335.3 |   352M |  89 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.536667e+02 | 6.540000e+02 | 157.82%
+*5631s|   649 |   151 |201136 | 310.4 |    LP  |  89 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.536667e+02 | 6.530000e+02 | 157.42%
+ 5783s|   700 |   152 |217672 | 311.4 |   352M |  89 | 701 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.550000e+02 | 6.530000e+02 | 156.08%
+ 5840s|   800 |   154 |223465 | 279.7 |   352M |  89 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.550000e+02 | 6.530000e+02 | 156.08%
+ 6217s|   900 |   162 |253281 | 281.7 |   352M |  89 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.583333e+02 | 6.530000e+02 | 152.77%
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+ 6600s|  1000 |   168 |268069 | 268.3 |   352M |  89 |   - | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.590000e+02 | 6.530000e+02 | 152.12%
+ 6605s|  1100 |   170 |268639 | 244.4 |   352M |  91 |  24 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.590000e+02 | 6.530000e+02 | 152.12%
+ 6610s|  1200 |   168 |269239 | 224.6 |   352M |  91 |  31 | 729 |  88k| 729 |  88k|   0 |   0 |   0 | 2.590000e+02 | 6.530000e+02 | 152.12%
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 7200.04
+Solving Nodes      : 1282
+Primal Bound       : +6.53000000000000e+02 (482 solutions)
+Dual Bound         : +2.61000000000000e+02
+Gap                : 150.19 %
+
+Number of variables fixed to 0 by isomorphism pruning:	 14959
+Number of variables fixed to 1 by isomorphism pruning:	   130
+@04 1686573971

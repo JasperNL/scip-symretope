@@ -1,0 +1,73 @@
+FILENAME:   ../instances_new/flowersnark/flowersnark9_3.cip
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_flowersnark__settings_isopr_minimalindexbranching_avoidsubtreenodes__2__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   flowersnark9_3.cip
+SEED:       2
+@01 ../instances_new/flowersnark/flowersnark9_3.cip ===========
+@02 flowersnark9_3.cip
+@03 1686559502
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 2
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 162 variables (162 bin, 0 int, 0 impl, 0 cont) and 162 constraints
+presolving:
+(round 1, exhaustive) 0 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 162 upgd conss, 0 impls, 162 clqs
+   (0.0s) probing: 51/162 (31.5%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.0s) probing aborted: 50/50 successive totally useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.00 	(matrix graph, 324 nodes, 486 edges)
+Number of generators:			5 	(max: 1500)
+Order of symmetry group:		216
+Log10 of symmetry group order:		2.3
+Number of vars moved by some symmetry:	162
+Total time for symmetry detection:	0.00
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 162 cliques
+presolved problem has 162 variables (162 bin, 0 int, 0 impl, 0 cont) and 163 constraints
+    162 constraints of type <setppc>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  0.0s|     1 |     0 |     0 |     - |  2875k |   0 |  51 | 162 | 180 | 162 | 162 |   0 |  16 |   0 | 0.000000e+00 |      --      |    Inf 
+  0.1s|     1 |     2 |   156 |     - |  3193k |   0 |  51 | 162 | 381 | 162 | 162 |   0 |  17 |   0 | 0.000000e+00 |      --      |    Inf 
+
+SCIP Status        : problem is solved [infeasible]
+Solving Time (sec) : 0.13
+Solving Nodes      : 19
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : +1.00000000000000e+20
+Gap                : 0.00 %
+
+Number of variables fixed to 0 by isomorphism pruning:	    42
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686559502

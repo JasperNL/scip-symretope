@@ -1,0 +1,76 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2017/stein9inf.mps.gz
+SETTINGS:   settings_isopr_minimalindexbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_minimalindexbranching_avoidsubtreenodes__2__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   stein9inf.mps.gz
+SEED:       2
+@01 /home/mcs001/s132664/testsets/IP/miplib2017/stein9inf.mps.gz ===========
+@02 stein9inf.mps.gz
+@03 1686566818
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_minimalindexbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 2
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+usebranchfirst = TRUE
+
+
+solving problem ...
+
+original problem has 9 variables (9 bin, 0 int, 0 impl, 0 cont) and 14 constraints
+presolving:
+(round 1, fast)       0 del vars, 0 del conss, 0 add conss, 0 chg bounds, 1 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 2, exhaustive) 0 del vars, 1 del conss, 0 add conss, 0 chg bounds, 1 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
+(round 3, exhaustive) 0 del vars, 1 del conss, 0 add conss, 0 chg bounds, 1 chg sides, 0 chg coeffs, 12 upgd conss, 0 impls, 0 clqs
+   (0.0s) probing cycle finished: starting next cycle
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.00 	(matrix graph, 40 nodes, 90 edges)
+Number of generators:			4 	(max: 1500)
+Order of symmetry group:		432
+Log10 of symmetry group order:		2.6
+Number of vars moved by some symmetry:	9
+Total time for symmetry detection:	0.00
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 0 deleted vars, 1 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 1 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 9 variables (9 bin, 0 int, 0 impl, 0 cont) and 14 constraints
+      1 constraints of type <linear>
+     12 constraints of type <logicor>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  0.0s|     1 |     0 |     0 |     - |   667k |   0 |   0 |   9 |  14 |   9 |  12 |   0 |   0 |   0 | 4.000000e+00 |      --      |    Inf 
+  0.0s|     1 |     0 |     0 |     - |   907k |   0 |   - |   9 |  24 |   9 |  12 |   0 |   0 |   0 |    cutoff    |      --      |   0.00%
+  0.0s|     1 |     0 |     0 |     - |   907k |   0 |   - |   9 |  24 |   9 |  12 |   0 |   0 |   0 |    cutoff    |      --      |   0.00%
+
+SCIP Status        : problem is solved [infeasible]
+Solving Time (sec) : 0.01
+Solving Nodes      : 1
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : +1.00000000000000e+20
+Gap                : 0.00 %
+
+Number of variables fixed to 0 by isomorphism pruning:	     0
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686566818

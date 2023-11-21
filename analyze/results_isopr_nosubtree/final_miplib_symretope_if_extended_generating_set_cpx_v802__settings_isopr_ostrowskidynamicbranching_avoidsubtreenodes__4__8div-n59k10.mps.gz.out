@@ -1,0 +1,86 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2017/8div-n59k10.mps.gz
+SETTINGS:   settings_isopr_ostrowskidynamicbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_ostrowskidynamicbranching_avoidsubtreenodes__4__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   8div-n59k10.mps.gz
+SEED:       4
+@01 /home/mcs001/s132664/testsets/IP/miplib2017/8div-n59k10.mps.gz ===========
+@02 8div-n59k10.mps.gz
+@03 1686581330
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_ostrowskidynamicbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+randomization/randomseedshift = 4
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+
+
+solving problem ...
+
+original problem has 6143 variables (6138 bin, 5 int, 0 impl, 0 cont) and 2065 constraints
+presolving:
+(round 1, fast)       10 del vars, 10 del conss, 2 add conss, 21 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 1023 clqs
+(round 2, fast)       10 del vars, 10 del conss, 2 add conss, 21 chg bounds, 4 chg sides, 6 chg coeffs, 0 upgd conss, 0 impls, 1023 clqs
+(round 3, exhaustive) 10 del vars, 11 del conss, 2 add conss, 21 chg bounds, 6 chg sides, 6 chg coeffs, 0 upgd conss, 0 impls, 1023 clqs
+(round 4, exhaustive) 10 del vars, 11 del conss, 2 add conss, 21 chg bounds, 6 chg sides, 6 chg coeffs, 1023 upgd conss, 0 impls, 1023 clqs
+   (0.8s) probing: 1000/6128 (16.3%) - 0 fixings, 0 aggregations, 999 implications, 0 bound changes
+   (0.8s) probing: 1001/6128 (16.3%) - 0 fixings, 0 aggregations, 1000 implications, 0 bound changes
+   (0.8s) probing aborted: 1000/1000 successive useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.98 	(matrix graph, 15373 nodes, 1068048 edges)
+Number of generators:			9 	(max: 1500)
+Log10 of symmetry group order:		6.6
+Number of vars moved by some symmetry:	6122
+Total time for symmetry detection:	0.99
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (5 rounds: 5 fast, 3 medium, 3 exhaustive):
+ 10 deleted vars, 11 deleted constraints, 2 added constraints, 21 tightened bounds, 0 added holes, 6 changed sides, 6 changed coefficients
+ 1000 implications, 1023 cliques
+presolved problem has 6133 variables (6128 bin, 5 int, 0 impl, 0 cont) and 2057 constraints
+   1023 constraints of type <setppc>
+   1033 constraints of type <linear>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 1.70
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  3.4s|     1 |     0 |   142 |     - |   238M |   0 |1732 |6133 |2057 |6133 |2056 |   0 |   0 |   0 |-7.090000e+02 |      --      |    Inf 
+ 29.0s|     1 |     0 |  5254 |     - |   238M |   0 |1732 |6133 |2062 |6133 |2056 |   0 |   5 |   0 |-7.090000e+02 |      --      |    Inf 
+ 29.4s|     1 |     0 |  5254 |     - |   238M |   0 |1732 |6133 |2062 |6133 |2056 |   0 |   5 |   0 |-7.090000e+02 |      --      |    Inf 
+ 30.2s|     1 |     0 |  5254 |     - |   239M |   0 |1732 |6133 |2064 |6133 |2058 |   0 |   5 |   0 |-7.090000e+02 |      --      |    Inf 
+ 51.9s|     1 |     2 |  5254 |     - |   240M |   0 |1732 |6133 |2064 |6133 |2058 |   0 |   5 |  12 |-7.090000e+02 |      --      |    Inf 
+ 1314s|   100 |    85 |399580 |3984.2 |   245M |  24 |1744 |6133 |2173 |6133 |2055 |   0 | 136 | 171 |-7.090000e+02 |      --      |    Inf 
+ 2397s|   200 |   159 |649438 |3237.6 |   247M |  37 |1756 |6133 |2241 |6133 |2055 |   0 | 204 | 412 |-7.090000e+02 |      --      |    Inf 
+ 3604s|   300 |   229 |869325 |2890.2 |   247M |  37 |1715 |6133 |2285 |6133 |2055 |   0 | 248 | 788 |-7.090000e+02 |      --      |    Inf 
+ 4313s|   400 |   295 |  1106k|2761.1 |   250M |  46 |1701 |6133 |2323 |6133 |2055 |   0 | 299 | 911 |-7.090000e+02 |      --      |    Inf 
+ 4941s|   500 |   359 |  1360k|2717.0 |   250M |  53 |1778 |6133 |2401 |6133 |2055 |   0 | 377 | 929 |-7.090000e+02 |      --      |    Inf 
+ 5673s|   600 |   429 |  1629k|2711.3 |   251M |  53 |1722 |6133 |2441 |6133 |2055 |   0 | 417 |1010 |-7.090000e+02 |      --      |    Inf 
+ 6679s|   700 |   491 |  1874k|2674.5 |   253M |  53 |1736 |6133 |2536 |6133 |2055 |   0 | 520 |1304 |-7.090000e+02 |      --      |    Inf 
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 7200.03
+Solving Nodes      : 773
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : -7.09000000000000e+02
+Gap                : infinite
+
+Number of variables fixed to 0 by isomorphism pruning:	  2094
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686588533

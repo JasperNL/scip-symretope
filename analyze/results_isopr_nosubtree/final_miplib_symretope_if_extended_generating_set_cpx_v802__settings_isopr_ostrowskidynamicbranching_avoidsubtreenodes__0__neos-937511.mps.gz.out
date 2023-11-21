@@ -1,0 +1,93 @@
+FILENAME:   /home/mcs001/s132664/testsets/IP/miplib2010/neos-937511.mps.gz
+SETTINGS:   settings_isopr_ostrowskidynamicbranching_avoidsubtreenodes
+TIMELIMIT:  7200
+OUTPUTNAME: final_miplib_symretope_if_extended_generating_set_cpx_v802__settings_isopr_ostrowskidynamicbranching_avoidsubtreenodes__0__
+BINNAME:    bin/symmetries.linux.x86_64.gnu.opt.cpx
+BASENAME:   neos-937511.mps.gz
+SEED:       0
+@01 /home/mcs001/s132664/testsets/IP/miplib2010/neos-937511.mps.gz ===========
+@02 neos-937511.mps.gz
+@03 1686573976
+SCIP version 8.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: CPLEX 20.1.0.0] [GitHash: 5f0473c]
+Copyright (C) 2002-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Symmetry handling routines - (c) Marc Pfetsch, Thomas Rehn, Christopher Hojny.
+[GitHash: a1587cb]
+
+
+Turned off presolver <gateextraction>.
+reading parameter file <../settings/settings_isopr_ostrowskidynamicbranching_avoidsubtreenodes.set> ...
+
+Changed settings:
+limits/time = 7200
+limits/restarts = 0
+constraints/orbitope/sepafreq = -1
+constraints/orbitope/propfreq = 1
+presolving/gateextraction/maxrounds = 0
+propagating/isoprune/avoidsubtreenodes = TRUE
+useisoprune = TRUE
+
+
+solving problem ...
+
+Warning line 8162: row "R8160" for objective function "N" ignored
+Warning line 8163: row "R8161" for objective function "N" ignored
+original problem has 11332 variables (8562 bin, 0 int, 0 impl, 2770 cont) and 8158 constraints
+presolving:
+(round 1, fast)       2013 del vars, 0 del conss, 0 add conss, 160 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 7150 clqs
+(round 2, fast)       2013 del vars, 0 del conss, 0 add conss, 160 chg bounds, 160 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 7150 clqs
+(round 3, fast)       2013 del vars, 0 del conss, 0 add conss, 917 chg bounds, 160 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 7150 clqs
+(round 4, exhaustive) 2013 del vars, 33 del conss, 0 add conss, 917 chg bounds, 160 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 7150 clqs
+(round 5, exhaustive) 2013 del vars, 33 del conss, 0 add conss, 917 chg bounds, 160 chg sides, 0 chg coeffs, 7377 upgd conss, 0 impls, 7150 clqs
+   (1.4s) probing: 1000/8571 (11.7%) - 0 fixings, 0 aggregations, 18228 implications, 0 bound changes
+   (1.4s) probing: 1001/8571 (11.7%) - 0 fixings, 0 aggregations, 18246 implications, 0 bound changes
+   (1.4s) probing aborted: 1000/1000 successive useless probings
+Required symmetry:			(1 bin, 0 int, 0 cont); (fixed: 0 bin, 1 int, 0 cont)
+Time for symmetry detection:		0.19 	(matrix graph, 30850 nodes, 87860 edges)
+Number of generators:			27 	(max: 1500)
+Log10 of symmetry group order:		9.2
+Number of vars moved by some symmetry:	7176
+Total time for symmetry detection:	0.20
+
+Turned off presolver <domcol>.
+Turned off presolver <components>.
+
+presolving (6 rounds: 6 fast, 3 medium, 3 exhaustive):
+ 2013 deleted vars, 33 deleted constraints, 0 added constraints, 917 tightened bounds, 0 added holes, 160 changed sides, 0 changed coefficients
+ 0 implications, 25396 cliques
+presolved problem has 9319 variables (8562 bin, 0 int, 757 impl, 0 cont) and 8126 constraints
+    218 constraints of type <knapsack>
+   7150 constraints of type <setppc>
+    748 constraints of type <linear>
+      9 constraints of type <logicor>
+      1 constraints of type <symmetries>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 1.61
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+t 1.7s|     1 |     0 |     0 |     - | trivial|   0 |   - |9319 |8126 |   0 |   0 |   0 |   0 |   0 |-5.362200e+05 | 5.340000e+04 |    Inf 
+p 1.8s|     1 |     0 |     0 |     - |  clique|   0 |   - |9319 |8126 |9319 |8125 |   0 |   0 |   0 |-5.362200e+05 | 9.753000e+03 |    Inf 
+p 1.8s|     1 |     0 |   365 |     - | vbounds|   0 |   - |9319 |8126 |9319 |8125 |   0 |   0 |   0 |-5.362200e+05 | 7.228000e+03 |    Inf 
+  3.3s|     1 |     0 |  8032 |     - |   110M |   0 |1723 |9319 |8142 |9319 |8125 |   0 |  16 |   0 | 3.510000e+03 | 7.228000e+03 | 105.93%
+L65.6s|     1 |     0 | 11748 |     - |    rens|   0 |1723 |9319 |8143 |9319 |8125 |   0 |  17 |   0 | 3.510000e+03 | 4.979000e+03 |  41.85%
+ 65.6s|     1 |     0 | 11748 |     - |   115M |   0 |1723 |9319 |8143 |9319 |8125 |   0 |  17 |   0 | 3.510000e+03 | 4.979000e+03 |  41.85%
+i65.9s|     1 |     0 | 12430 |     - |  oneopt|   0 |   - |9319 |8143 |9319 |8125 |   0 |  17 |   0 | 3.510000e+03 | 4.529000e+03 |  29.03%
+ 72.4s|     1 |     2 | 12430 |     - |   116M |   0 |1723 |9319 |8143 |9319 |8125 |   0 |  17 |  17 | 3.510000e+03 | 4.529000e+03 |  29.03%
+r 209s|    59 |    60 |106748 |1698.6 |ziroundi|  58 |  60 |9319 |8143 |9319 |8125 |   0 |  17 | 192 | 3.510000e+03 | 4.420000e+03 |  25.93%
+i 209s|    60 |    59 |106748 |1669.8 |  oneopt|  59 |   - |9319 |8143 |9319 |8125 |   0 |  17 | 192 | 3.510000e+03 | 3.700000e+03 |   5.41%
+r 216s|    78 |    77 |112404 |1352.9 |rounding|  77 |   6 |9319 |8143 |9319 |8125 |   0 |  17 | 192 | 3.510000e+03 | 3.605000e+03 |   2.71%
+i 216s|    78 |    79 |112407 |1352.9 |  oneopt|  77 |   - |9319 |8143 |9319 |8125 |   0 |  17 | 192 | 3.510000e+03 | 3.515000e+03 |   0.14%
+r 216s|    79 |    80 |112410 |1335.6 |ziroundi|  78 |   6 |9319 |8143 |9319 |8125 |   0 |  17 | 192 | 3.510000e+03 | 3.515000e+03 |   0.14%
+r 217s|    80 |    79 |112451 |1319.3 |rounding|  79 |   6 |9319 |8143 |9319 |8125 |   0 |  17 | 192 | 3.510000e+03 | 3.511000e+03 |   0.03%
+* 218s|    85 |     0 |113588 |1254.3 |    LP  |  84 |   - |9319 |8143 |9319 |8125 |   0 |  17 | 192 | 3.510000e+03 | 3.510000e+03 |   0.00%
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 218.49
+Solving Nodes      : 85
+Primal Bound       : +3.51000000000000e+03 (96 solutions)
+Dual Bound         : +3.51000000000000e+03
+Gap                : 0.00 %
+
+Number of variables fixed to 0 by isomorphism pruning:	    12
+Number of variables fixed to 1 by isomorphism pruning:	     0
+@04 1686574195
