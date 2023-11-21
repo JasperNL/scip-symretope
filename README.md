@@ -1,5 +1,7 @@
 # Efficient propagation techniques for handling cyclic symmetries in binary programs
 
+[![DOI](https://zenodo.org/badge/721324641.svg)](https://zenodo.org/doi/10.5281/zenodo.10182549)
+
 This is the code repository for the paper
 
 > Jasper van Doornmalen, Christopher Hojny, "Efficient Propagation Techniques for Handling Cyclic Symmetries in Binary Programs", arXiv preprint arXiv:2203.00992 (2022).
